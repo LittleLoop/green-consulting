@@ -1,0 +1,287 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Roboto:wght@300;400;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primaryColor: #b1cd54;
+  --headingFont: "Open Sans", sans-serif;
+  --bodyFont: "Roboto", sans-serif;
+  --transition: 0.2s all;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--headingFont);
+}
+
+/**************
+navbar
+**************/
+.navbar {
+  z-index: 10;
+}
+.navbar .navbar-brand img {
+  margin-right: 10px;
+}
+.navbar .navbar-brand span {
+  color: var(--primaryColor);
+  font-size: 2rem;
+  line-height: 1.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.navbar .navbar-nav .nav-link {
+  margin-right: 50px;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 300;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--primaryColor);
+}
+.navbar .navbar-nav .nav-link.active {
+  color: var(--primaryColor);
+}
+
+/**************
+header
+**************/
+#header {
+  background-image: linear-gradient(rgba(50, 25, 0, 0.6), rgba(50, 25, 0, 0.6)), url(../img/bg-header.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  border-bottom: 15px solid var(--primaryColor);
+  margin-top: -100px;
+  position: relative;
+}
+#header::after {
+  display: block;
+  content: "BESPOVRATNA SREDSTVA";
+  color: white;
+  opacity: 0.1;
+  width: 100vh;
+  font-size: 16rem;
+  line-height: 16rem;
+  font-weight: bold;
+  position: absolute;
+  top: 100px;
+}
+#header .row {
+  height: 100vh;
+}
+#header .row h1 {
+  font-size: 6rem;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+#header .row h1 span {
+  color: var(--primaryColor);
+}
+
+/**************
+usluge
+**************/
+#usluge {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/bg-usluge.jpg);
+  background-position: top center;
+  background-size: cover;
+  height: 100vh;
+  border-bottom: 15px solid var(--primaryColor);
+  position: relative;
+}
+#usluge::after {
+  display: block;
+  content: "Definisanja i strukturiranja projekata, podnošenja prijava, praćenja realizacija projekata, pravdanja sredstava, pisanja biznis plana, finansijskog konsultovanja";
+  color: white;
+  opacity: 0.1;
+  width: 90%;
+  height: 100%;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: bold;
+  position: absolute;
+  top: 80vh;
+}
+#usluge .row {
+  height: 100vh;
+}
+#usluge .row h2 {
+  font-size: 9rem;
+  font-weight: bold;
+  line-height: 7rem;
+}
+#usluge .row h2 span {
+  color: var(--primaryColor);
+}
+#usluge .row p {
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: var(--bodyFont);
+}
+#usluge .row p span {
+  color: var(--primaryColor);
+}
+#usluge #carouselUsluge .carousel-control-next {
+  text-decoration: none;
+  color: var(--primaryColor);
+  font-weight: bold;
+  height: 50px;
+  top: 90%;
+  right: 5%;
+}
+#usluge #carouselUsluge .card-body {
+  padding: 40px;
+}
+#usluge #carouselUsluge .card-body .card-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--primaryColor);
+  text-transform: uppercase;
+  padding-bottom: 30px;
+}
+#usluge #carouselUsluge .card-body .card-text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  padding-bottom: 70px;
+  font-family: var(--bodyFont);
+}
+#usluge #carouselUsluge .card-body .card-text span {
+  font-style: italic;
+  color: black;
+  display: block;
+}
+
+/**************
+kontakt
+**************/
+#kontakt {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/bg-kontakt.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  border-bottom: 15px solid var(--primaryColor);
+  position: relative;
+}
+#kontakt::after {
+  display: block;
+  content: "KONTAKTIRAJTE NAS";
+  color: white;
+  opacity: 0.1;
+  width: 90%;
+  height: 100%;
+  font-size: 10rem;
+  line-height: 8rem;
+  font-weight: bold;
+  position: absolute;
+  top: 85vh;
+  left: 100px;
+}
+#kontakt h2 {
+  font-size: 8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#kontakt p {
+  font-size: 1.6rem;
+  padding-bottom: 20px;
+}
+#kontakt p i {
+  color: var(--primaryColor);
+  font-size: 2.5rem;
+}
+#kontakt ::placeholder {
+  color: var(--primaryColor);
+}
+#kontakt form input,
+#kontakt form textarea {
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 0;
+  font-size: 1.8rem;
+}
+#kontakt form input:focus,
+#kontakt form textarea:focus {
+  border: none;
+}
+#kontakt form button {
+  width: 100%;
+  background: var(--primaryColor);
+  color: white;
+  padding: 25px;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-family: var(--headingFont);
+  border-radius: 60px;
+}
+
+/**************
+korisniLinkovi
+**************/
+#korisniLinkovi {
+  height: auto;
+}
+#korisniLinkovi h2 {
+  font-size: 8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--primaryColor);
+  font-family: var(--headingFont);
+  line-height: 7.5rem;
+}
+#korisniLinkovi .row:first-child {
+  width: 65%;
+}
+#korisniLinkovi .row:last-child {
+  width: 75%;
+}
+
+/**************
+footer
+**************/
+.footer {
+  height: auto;
+}
+.footer .logo a {
+  text-decoration: none;
+}
+.footer .logo a img {
+  margin-right: 10px;
+}
+.footer .logo a span {
+  color: var(--primaryColor);
+  font-size: 2.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.footer .info {
+  background: var(--primaryColor);
+  padding: 40px 40px 40px 60px;
+}
+.footer .info .list-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.footer .info h4 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.footer .info .col-md-4 p {
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+.footer .info .col-md-5 a {
+  color: white;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-family: var(--bodyFont);
+}
+
+/*# sourceMappingURL=style.css.map */
